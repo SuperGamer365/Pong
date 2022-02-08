@@ -42,7 +42,6 @@ bool Ball::wallCollision() {
 void Ball::bounce(Paddle *paddle) {
 	if (this->y <= paddle->y) {
 		if (this->x >= paddle->x || this->x + paddle->WIDTH <= paddle->x + paddle->WIDTH) {
-			velx *= -1;
 			vely *= -1;
 		}
 	}
