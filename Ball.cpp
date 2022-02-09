@@ -21,6 +21,10 @@ void Ball::update() {
 		velx *= -1;
 	}
 
+	if (this->y + DIAMETER >= 600) {
+		losing = true;
+	}
+
 	x += velx;
 	y += vely;
 }
@@ -33,7 +37,7 @@ bool Ball::roofCollision() {
 }
 
 bool Ball::wallCollision() {
-	if (x <= 0 || x >= 600) {
+	if (x <= 0 || x >= 800) {
 		return true;
 	}
 	return false;
